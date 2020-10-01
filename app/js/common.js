@@ -19,30 +19,52 @@ $(function() {
 
 
 
+	// $(document).ready(function() {
+
+	// 	$('.about_us').on('click',function(){
+	// 		$(this).addClass('is-active')
+
+	// 		$('.box_content').addClass('is-active');
+	// 		$('.box_image').addClass('is-active');
+
+	// 	});
+	// })
+
 	$(document).ready(function() {
 
 		$('.about_us').on('click',function(){
-			$(this).addClass('is-active')
+			$(this).toggleClass('is-active')
 
-			$('.box_content').addClass('is-active');
-			$('.box_image').addClass('is-active');
+			$('.box_content').toggleClass('is-active');
+			$('.box_image').toggleClass('is-active');
 
 		});
 	})
 
-	$(document).ready(function() {
-		$("#sign_in_btn").on('click',function() {
-		  $(".form-popup-sign").toggleClass('active');
-		  $(".form-popup-log").removeClass('active');
-		});
-	  });
+
 
 	  $(document).ready(function() {
-		$("#log_in_btn").on('click',function() {
-		  $(".form-popup-log").toggleClass('active');
-		  $(".form-popup-sign").removeClass('active');
+		$('.popup-with-form').magnificPopup({
+			type: 'inline',
+			preloader: false,
+			focus: '#name',
+	
+			// When elemened is focused, some mobile browsers in some cases zoom in
+			// It looks not nice, so we disable it:
+			callbacks: {
+				beforeOpen: function() {
+					if($(window).width() < 700) {
+						this.st.focus = false;
+					} else {
+						this.st.focus = '#name';
+					}
+				}
+			}
 		});
-	  });
+	});
+
+
+	  
 
 
 

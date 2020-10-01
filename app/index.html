@@ -85,11 +85,15 @@
 		</div>
 		<!-- Faded Box -->
 		<div class="faded_box_wrap">
-			<div class="box_content">
-				<p>growth. is an online community with thousands of classes for creative and inquisitive people on a variety of topics. At growth., many people come together to find inspiration and take the next step in their creative journey. <br> <br> growth. is an online community with thousands of classes for creative and inquisitive people on a variety of topics. At growth., many people come together to find inspiration and take the next step in their creative journey.</p>
-			</div>
-			<div class="box_image">
-				<img src="img/_src/251.png" alt="">
+			<div class="box-wrap">
+				<div class="box_content">
+					<h2>This part is...</h2>
+					<h3>Just a play with animations</h3>
+					<p>growth. is an online community with thousands of classes for creative and inquisitive people on a variety of topics. At growth., many people come together to find inspiration and take the next step in their creative journey.</p>
+				</div>
+				<div class="box_image">
+					<img src="img/_src/251.png" alt="">
+				</div>
 			</div>
 			<div class="box_main">
 				<h4>About us</h4>
@@ -158,39 +162,54 @@
 
 			</div>
 		</div>
-		<!-- Folders -->
+		<!-- Form Folders -->
 		<div class="folders_wrapper">
-			<h4> let’s started</h4>
+			<h4> let’s get started</h4>
 			<h2>Explore new knowledge</h2>
 			<p>Not only in the form of a certificate, but also by empowering you with the skills, knowledge and confidence you need to take on the next challenge in your career.</p>
 			<div class="buttons">
-				<button id="sign_in_btn" class="sign_in">Sign In</button>
-				<button id="log_in_btn" class="log_in">Log In</button>
+				<button id="sign_in_btn" class="sign_in popup-with-form" href="#sign_in">Sign In</button>
+				<button id="log_in_btn" class="log_in popup-with-form" href="#log_in">Log In</button>
 			</div>
+
+			<!-- Form Sign In -->
 			<div class="form-popup-sign" id="sign_in">
 				<form action="/action_page.php" class="form-container">
-				  <h1>Sign In</h1>
+					<h1>CREATE AN ACCOUNT</h1>
+					<div class="info_box">
+						<input type="text" placeholder="First Name" name="email" required>
+						<input type="text" placeholder="Last Name" name="email" required>
+					</div>
+					<input type="text" placeholder="Enter Email" name="email" required>
+					<input type="text" placeholder="Confirm email address" name="confirm_email" required>
 			  
-				  <label for="email"><b>Email</b></label>
-				  <input type="text" placeholder="Enter Email" name="email" required>
-			  
-				  <label for="psw"><b>Password</b></label>
-				  <input type="password" placeholder="Enter Password" name="psw" required>
-			  
-				  <button type="submit" class="btn">Login</button>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<span>Already have an account? <a href="">Sign In</a></span>
+					<button type="submit" class="btn">Sign In</button>
+					<span>By clicking «Sign Up» I agree to the <a href="">Terms and Conditions</a></span>
 				</form>
 			  </div>
+
+			  <!-- Form Log In -->
 			  <div class="form-popup-log" id="log_in">
 				<form action="/action_page.php" class="form-container">
-				  <h1>Login</h1>
-			  
-				  <label for="email"><b>Email</b></label>
+				  <h1>Welcome back</h1>
+
 				  <input type="text" placeholder="Enter Email" name="email" required>
-			  
-				  <label for="psw"><b>Password</b></label>
+			
 				  <input type="password" placeholder="Enter Password" name="psw" required>
 			  
-				  <button type="submit" class="btn">Login</button>
+				  <div class="bottom-box">
+						<div class="checkbox">
+							<input type="checkbox" id="rememberme" name="remember" value="remember">
+							<label for="rememberme">Remember Me</label>
+						</div>
+					<a href="">Reset Password?</a>
+				  </div>
+			  
+				  <button type="submit" class="btn">Log In</button>
+				  <span>Dont Have Account? <a href="">Sign Up</a></span>
 				</form>
 			  </div>
 
